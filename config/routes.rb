@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :talker
+  root 'talker#index'
+  resources :talker, except: :index
   resources :learn
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
