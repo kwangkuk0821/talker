@@ -1,1 +1,31 @@
-<h1>talker index 페이지입니다.</h1>
+<div class="main-page">
+  <a href="/learn">
+    <button class="learn-button">가르치러 가기</button>
+  </a>
+  <section class="chat">
+    <div class="left">
+      <div class="profile">
+        <div class="icon"></div>
+        <div class="name">Bot</div>
+      </div>
+      <div class="balloon">
+        <div class="tail"></div>
+        <div class="text">안녕하세요</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="profile">
+        <div class="icon"></div>
+        <div class="name">User</div>
+      </div>
+      <div class="balloon">
+        <div class="tail"></div>
+        <div class="text">네, 반갑습니다</div>
+      </div>
+    </div>
+  </section>
+  <%= form_tag '/talker', method: 'post', class: "chat-form" do %>
+    <input type="text" placeholder="입력..." name="ask">
+    <input type="submit" value="전송">
+  <% end %>
+</div>
