@@ -1,5 +1,6 @@
 class TalkerController < ApplicationController
   def index
+    @chats = Chat.all
   end
 
   def create
