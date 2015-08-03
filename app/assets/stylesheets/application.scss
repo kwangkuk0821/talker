@@ -13,3 +13,198 @@
  *= require_tree .
  *= require_self
  */
+body {
+  padding-top: 5%;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  .iphone6 {
+    position: relative;
+    width: 45%;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 90%;
+    border: 5px solid #d3d3d3;
+    background: #202020;
+    border-radius: 3em;
+    .power {
+      position: absolute;
+      top: 19.5%;
+      right: calc(-1.5% - 5px);
+      width: 1.5%;
+      height: 7%;
+      background: #CACACA;
+      border-top-right-radius: .5em;
+      border-bottom-right-radius: .5em;
+    }
+    .manner-mode {
+      position: absolute;
+      top: 12.5%;
+      left: calc(-1.5% - 5px);
+      width: 1.5%;
+      height: 5%;
+      background: #CACACA;
+      border-top-left-radius: .5em;
+      border-bottom-left-radius: .5em;
+    }
+    .volume {
+      position: absolute;
+      width: 1.5%;
+      height: 7%;
+      left: calc(-1.5% - 5px);
+      background: #CACACA;
+      border-top-left-radius: .5em;
+      border-bottom-left-radius: .5em;
+    }
+    .volume-joint {
+      position: absolute;
+      top: 28%;
+      left: calc(-0.8% - 5px);
+      width: 0.8%;
+      height: 3%;
+      background: #CACACA;
+    }
+    .volume.up  { top: 22%; }
+    .volume.down{ top: 30%; }
+    .camera {
+      position: absolute;
+      top: 3.5%;
+      left: 48.5%;
+      width: 3%;
+      height: 0;
+      background: #3f3f3f;
+      padding-top: 3%;
+      border-radius: 50%;
+    }
+    .camera2 {
+      position: absolute;
+      top: 7%;
+      left: 33.5%;
+      width: 3%;
+      height: 0;
+      background: #3f3f3f;
+      padding-top: 3%;
+      border-radius: 50%;
+    }
+    .speaker {
+      position: absolute;
+      top: 7%;
+      left: 42.5%;
+      width: 15%;
+      height: 0;
+      background: #3f3f3f;
+      padding-top: 3%;
+      border-radius: 1em;
+    }
+    .screen {
+      width: 90%;
+      height: 75%;
+      position: absolute;
+      top: 12.5%;
+      left: 5%;
+      background: #B0CCDB;
+      border: 2px solid;
+      box-sizing: border-box;
+    }
+    .home-button {
+      position: absolute;
+      bottom: 2.75%;
+      left: 42.5%;
+      border: 2px solid #3f3f3f;
+      width: 15%;
+      height: 0;
+      padding-top: 15%;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    &.black {
+      background: #202020;
+      border-color: #d3d3d3;
+      .power, .manner-mode, .volume, .volume-joint {
+        background: #CACACA;
+      }
+      .camera, .camera2, .speaker {
+        background: #3f3f3f;
+      }
+      .screen {
+        border-color: #202020;
+        .start-button {
+          background-color: white;
+          border-color: #202020;
+          color: #202020;
+          &:hover {
+            background-color: #202020;
+            color: white;
+          }
+        }
+      }
+      .home-button {
+        border-color: #d3d3d3;
+      }
+    }
+    &.silver {
+      background: #F1F1F1;
+      border-color: #C9C9CB;
+      .power, .manner-mode, .volume, .volume-joint {
+        background: #CACACA;
+      }
+      .camera, .camera2, .speaker {
+        background: #3f3f3f;
+      }
+      .screen {
+        border-color: #d3d3d3;
+        .start-button {
+          background-color: #F1F1F1;
+          border-color: #c9c9c9;
+          color: #c9c9c9;
+          &:hover {
+            background-color: #c9c9c9;
+            color: #F1F1F1;
+          }
+        }
+      }
+      .home-button {
+        border-color: #d3d3d3;
+      }
+    }
+    &.gold {
+      background: #F8F8F8;
+      border-color: #F7E7CE;
+      .power, .manner-mode, .volume, .volume-joint {
+        background: #F7E5AA;
+      }
+      .camera, .camera2, .speaker {
+        background: #3f3f3f;
+      }
+      .screen {
+        border-color: #F7E7CE;
+        .start-button {
+          background-color: #F8F8F8;
+          border-color: #F7E7CE;
+          color: #F7E7CE;
+          &:hover {
+            background-color: #F7E7CE;
+            color: #F8F8F8;
+          }
+        }
+      }
+      .home-button {
+        border-color: #F7E7CE;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 28em) {
+  body{ font-size: 8px; }
+}
+
+@media screen and (min-width: 34em) {
+  body{ font-size: 10px; }
+}
+
+@media screen and (min-width: 48em) {
+  body{ font-size: 14px; }
+}
