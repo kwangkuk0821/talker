@@ -7,8 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="iphone6 black">
+      <div class="power"></div>
+      <div class="manner-mode"></div>
+      <div class="volume up"></div>
+      <div class="volume-joint"></div>
+      <div class="volume down"></div>
+      <div class="camera"></div>
+      <div class="camera2"></div>
+      <div class="speaker"></div>
+      <div class="screen">
+        <%= yield %>
+      </div>
+      <a href="/">
+        <div class="home-button"></div>
+      </a>
+    </div>
+  </div>
+  <script>
+  $(document).ready(function() {
+    //배경색 세팅
+    $iphone6 = $('.iphone6');
+    if( $iphone6.hasClass('silver') )
+      $('body').css('background', 'darkgray')
+    else if( $iphone6.hasClass('gold') )
+      $('body').css('background', 'lemonchiffon')
 
-<%= yield %>
+    //스크롤을 가장 아래로
+    var $chat = $('.chat');
+    var height = $chat.prop('scrollHeight');
+    $chat.scrollTop(height);
+
+  });
+  </script>
+
 
 </body>
 </html>
